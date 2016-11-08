@@ -17,7 +17,7 @@ public:
     int category(){return category_;}
     void set_category(double category){category_ = category;} 
     double distanceWithAnother(Item &);
-    virtual void print_Item();
+    void print_Item();
 protected:
     vector<double> inputs_;
     int category_;
