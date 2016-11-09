@@ -1,17 +1,8 @@
-#pragma once
 #ifndef KMEANS.HPP
 #define KMEANS.HPP
-#include<iostream>
-#include<vector>
-#include<algorithm>
 #include<stdexcept>
 #include<numeric>
-#include "Item.hpp"
 #include "Center.hpp"
-
-using std::cout;
-using std::endl;
-using std::vector;
 
 class KMeans
 {

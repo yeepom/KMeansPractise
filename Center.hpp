@@ -1,12 +1,8 @@
 #ifndef CENTER.HPP
 #define CENTER.HPP 
-#include<algorithm>
 #include<functional>
-#include<iostream>
 #include "Item.hpp"
 using std::transform;
-using std::cout;
-using std::endl;
 
 class Center : public Item
 {
