@@ -1,9 +1,9 @@
-#pragma once
 #ifndef ITEM.HPP
 #define ITEM.HPP
 #include<vector>
 #include<cmath>
 #include<iostream>
+#include<algorithm>
 using std::vector;
 using std::cout;
 using std::endl;
@@ -33,12 +33,8 @@ double Item::distanceWithAnother(Item & second)
 }
 void Item::print_Item()
 {
-    vector<double>::iterator it = inputs_.begin();
     cout<<" the inputs of this item is : (";
-    for(; it != inputs_.end(); it++)
-    {
-        cout<<(*it)<<", ";
-    }
+    std::copy(inputs_.begin(), inputs_.end(), std::ostream_iterator<double>(cout, " ")); 
     cout<<")";
     cout<<",this item belongs to "<<category_<<endl;
 }

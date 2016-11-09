@@ -1,4 +1,3 @@
-#pragma once
 #ifndef CENTER.HPP
 #define CENTER.HPP 
 #include<algorithm>
@@ -52,20 +51,12 @@ void Center::accu_reset()
 }
 void Center::print_Center()
 {
-    vector<double>::iterator it = inputs_.begin();
     cout<<" the center's inputs is (";
-    for(; it != inputs_.end(); it++)
-    {
-       cout<<*it<<", "; 
-    }
+    std::copy(inputs_.begin(), inputs_.end(), std::ostream_iterator<double>(cout, " "));
     cout<<"),";
     cout<<" the category it represents is "<<category_<<". ";
-    it = inputs_sum_.begin();
     cout<<"the center's inputs sum is (";
-    for(; it != inputs_sum_.end(); it++)
-    {
-        cout<<*it<<", ";
-    } 
+    std::copy(inputs_sum_.begin(), inputs_sum_.end(), std::ostream_iterator<double>(cout, " "));
     cout<<"),";
     cout<<" the number of items is "<<item_numbers_<<endl; 
 }
